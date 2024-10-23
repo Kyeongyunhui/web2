@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계속회전하는텍스트</title>
+    <style>
+        @font-face {
+    font-family: 'HSBombaram';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        .animation_text {
+            width: max-content;
+            /* html요소의 너비를 최대한 늘리고 싶을 때 사용 */
+            /* 최대 너비는 안에 담고있는 컨텐츠의 길이에 따라 좌우된다. */
+            /* 텍스트 컨텐츠의 경우 줄바꿈을 하지 않으면 문장의 길이가 길어진다. */
+            /* 자식요소가 부모요소를 삐져나가서 콘텐츠만큼의 영역을 차지하게 된다. */
+            margin: 150px 0;
+        }
+
+        .animation_text01{
+            width: max-content;
+        }
+
+        .animation_text > p {
+            font-size: 100px;
+            font-family: 'HSBombaram';
+            animation: text_moving 30s linear infinite;
+        }
+
+        .animation_text01 > p {
+            font-size: 100px;
+            font-family: 'HSBombaram';
+            animation: text_moving 30s linear infinite;
+            animation-direction: reverse;
+        }
+
+        @keyframes text_moving {
+            from {
+                transform:translateX(0%)
+            }
+
+            to {
+                transform:translateX(-50%)
+            }
+
+        }
+        /* @keyframes text_moving01 {
+            from {
+                transform:translateX(-50%)
+            }
+
+            to {
+                transform:translateX(0%)
+            }
+        } */
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="animation_text">
+            <p>
+                And I wish time would slow down. So I could keep your heart around. If I can't make you stay another day, I'll wait another day for you. For you.
+            </p>
+        </div>
+        <div class="animation_text01">
+            <p>
+                And I wish time would slow down. So I could keep your heart around. If I can't make you stay another day, I'll wait another day for you. For you.
+            </p>
+        </div>
+    </section>
+</body>
+</html>

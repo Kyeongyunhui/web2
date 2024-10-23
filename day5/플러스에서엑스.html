@@ -15,39 +15,48 @@
             background-color: rgb(197, 197, 197);
             display: flex;
             justify-content: space-between;
-            line-height: 70px;
+            align-items: center;
             color: #fff;
+        }
+
+        ul {
+            display: flex;
         }
 
         li {
             list-style: none;
-            display: inline;
             margin: 0 10px;
         }
-        h1 {
+
+        .logo {
             margin: 0 16px;
         }
-        i {
+
+        .plus_btn > i {
             padding: 28px;
-            transform: scale(1.4);
         }
 
-        /* i:hover {
-            animation-name: ;
-            animation-duration: ;
-            animation-iteration-count: ;
-        } */
+        i:hover {
+            animation-name: plus_x;
+            animation-duration: 0.7s;
+        }
 
-        /* @keyframes plus_x {
+        @keyframes plus_x {
+            from {
+                transform:rotate(0deg);
+            }
+           to {
+                transform:rotate(-405deg);
+           }
+        }
 
-        } */
     </style>
 
 
 </head>
 <body>
     <header>
-        <h1>LOGO</h1>
+        <h1 class="logo">LOGO</h1>
         <nav>
             <ul>
                 <li>메뉴1</li>
@@ -56,8 +65,9 @@
                 <li>메뉴4</li>
             </ul>
         </nav>
-        <i class="fa-solid fa-plus"></i>
-
+        <div class="plus_btn">
+            <i class="fa-solid fa-plus fa-2x"></i>
+        </div>
     </header>
 </body>
 </html>
