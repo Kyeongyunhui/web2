@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바운스볼</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .ball{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(170, 252, 255);
+            border-radius: 50%;
+            margin: 50px;
+            animation: ball01 3s infinite;
+            box-shadow: 0px 10px 10px -10px #aaa;
+        }
+
+        .ball:nth-child(2){
+            animation-delay: 0.3s;
+        }
+
+        .ball:nth-child(3){
+            animation-delay: 0.6s;
+        }
+
+        @keyframes ball01{
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(200px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+    
+</body>
+</html>

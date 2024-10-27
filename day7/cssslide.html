@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄쥐가 지나가요</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        button{
+            width: 200px;
+            height: 80px;
+            background-color: rgb(235, 180, 110);
+            border-radius: 20px;
+            border: 0px;
+            font-size: 20px;
+            color: azure;
+            margin: 20px 0px;
+        }
+
+        button:focus{
+            outline: solid 3px rgb(199, 140, 63);
+        }
+
+
+        ul {
+            display: flex;
+            width: 1200px;
+            height: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+            animation: ham_moving 2s;
+            animation-timing-function: cubic-bezier(1, 0.19, 0.52, 1.19);
+        }
+
+        li {
+            list-style: none;
+            min-width: 276px;
+            height: 150px;
+            margin: 0px 12px;
+        }
+
+        li:nth-child(1){
+            background-image: url(./img/ham1.png);
+            background-size: cover;
+        }
+
+        li:nth-child(2){
+            background-image: url(./img/ham2.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(3){
+            background-image: url(./img/ham3.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(4){
+            background-image: url(./img/ham4.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(5){
+            background-image: url(./img/ham5.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(6){
+            background-image: url(./img/ham6.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(7){
+            background-image: url(./img/ham7.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(8){
+            background-image: url(./img/ham8.jpg);
+            background-size: cover;
+        }
+
+        @keyframes ham_moving {
+            from{
+                transform: translateX(0%);
+            }
+
+            to{
+                transform: translateX(-100%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <button>햄쥐가 지나가요</button>
+         <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+    </section>
+</body>
+</html>
