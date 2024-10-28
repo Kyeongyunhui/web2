@@ -9,24 +9,45 @@
         section {
             width: 1200px;
             display: flex;
+            flex-wrap: wrap;
             margin: 0 auto;
         }
 
         div{
-            width: 200px;
-            height: 200px;
+            width: 168px;
+            height: 168px;
             background-color: darkorange;
-            margin: 16px ;
+            margin: 16px;
         }
 
         @media (max-width: 1200px){
             section {
-                display: inline-block;
+                width: 1000px;
             }
+        }
 
-            /* div {
-                display: inline-block;
-            } */
+        @media (max-width: 1000px){
+            section {
+                width: 800px;
+            }
+        }
+
+        @media (max-width: 800px){
+            section {
+                width: 600px;
+            }
+        }
+
+        @media (max-width: 600px){
+            section {
+                width: 400px;
+            }
+        }
+
+        @media (max-width: 400px){
+            section {
+                width: 200px;
+            }
         }
     </style>
 </head>
