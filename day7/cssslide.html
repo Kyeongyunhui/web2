@@ -15,22 +15,30 @@
             width: 1200px;
             height: 400px;
             margin: 0 auto;
-            overflow: hidden;
+            
         }
 
         button{
-            width: 200px;
-            height: 80px;
-            background-color: rgb(235, 180, 110);
-            border-radius: 20px;
-            border: 0px;
+            display: block;
+            padding: 32px 48px;
             font-size: 20px;
+            background-color: rgb(235, 180, 110);
+            border-radius: 24px;
+            border: none;
+            text-align: center;
+            cursor: pointer;
             color: azure;
-            margin: 20px 0px;
+            margin: 50px auto;
         }
 
         button:focus{
             outline: solid 3px rgb(199, 140, 63);
+        }
+
+        button:focus + ul li {
+            animation: ham_moving 2s;
+            animation-timing-function: cubic-bezier(1, 0.19, 0.52, 1.19);
+            animation-fill-mode: forwards;
         }
 
 
@@ -39,17 +47,15 @@
             width: 1200px;
             height: 400px;
             margin: 0 auto;
-            /* overflow: hidden; */
-            animation: ham_moving 2s;
-            animation-timing-function: cubic-bezier(1, 0.19, 0.52, 1.19);
-            animation-fill-mode: forwards;
+            justify-content: space-between;
+            overflow: hidden;
         }
 
         li {
             list-style: none;
-            min-width: 276px;
+            min-width: 268px;
             height: 150px;
-            margin: 0px 12px;
+            margin: 0px 16px;
         }
 
         li:nth-child(1){
@@ -98,7 +104,7 @@
             }
 
             to{
-                transform: translateX(-100%);
+                transform: translateX(-1200px);
             }
         }
 
