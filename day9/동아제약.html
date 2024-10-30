@@ -7,14 +7,25 @@
     <title>동아제약</title>
     <script src="https://kit.fontawesome.com/88b6c6ee2b.js" crossorigin="anonymous"></script>
     <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
         }
 
         ul {
-            display: flex;   
+            display: flex;
         }
+
+        /* .pc_header {
+            display: none;
+        } */
 
         a {
             text-decoration: none;
@@ -26,22 +37,24 @@
             justify-content: space-between;
             align-items: center;
             border-top: solid 1px #000;
-            border-bottom: solid 3px #000;
+            border-bottom: solid 1px #000;
             padding: 16px 0;
         }
+
+
 
         .header_main nav {
             transform: translateX(-100px);
         }
 
 
-        .header_top > ul {
+        .header_top>ul {
             justify-content: flex-end;
             padding: 8px;
         }
 
-        .header_top > ul > li {
-            margin: 0 24px;
+        .header_top>ul>li {
+            margin: 0 10px;
             font-size: 14px;
         }
 
@@ -49,17 +62,18 @@
             list-style: none;
         }
 
-        .header_main > nav > ul {
+        .header_main>nav>ul {
             display: flex;
         }
 
-        .header_main > nav > ul > li {
-            margin: 0 10px;
-            font-size: 18px;
+        .header_main>nav>ul>li {
+            margin: 0 24px;
+            font-size: 16px;
             font-weight: 900;
+
         }
 
-        .header_main > h1 {
+        .header_main>h1 {
             background-image: url(./img/logo.svg);
             width: 150px;
             height: 25px;
@@ -67,80 +81,196 @@
             margin-left: 32px;
         }
 
+
+
         .header_button_right {
-            width: 400px;
+            /* width: 400px; */
             display: flex;
             justify-content: space-between;
             margin-right: 32px;
             align-items: center;
-            
         }
 
+        .header_button_right>div,
+        .header_button_right>figure {
+            margin: 0 16px;
+        }
+
+
         .search_box {
-            border: solid 1px #000;
-            width: 220px;
-            height: 24px;
-            border-radius: 50px;
-            display: flex;
+
             align-items: center;
             padding: 10px;
+            /* width: 250px; */
+            border: solid 1px #000;
+            border-radius: 50px;
+            padding: 16px;
         }
 
         i {
             transform: scale(1.4);
         }
 
-        .search_box > input {
+        .search_box>input {
+            /* margin-left: 16px; */
+            background: none;
             border: none;
-            margin-left: 16px;
-            background:none;
-        } 
+        }
 
         body {
             background-image: url(./img/동아제약1.jpg);
             height: 100vh;
             background-size: cover;
+            font-family: 'Pretendard-Regular';
         }
-        
+
+        @media (max-width: 1440px) {
+            .header_main nav>ul>li {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .search_box>input {
+                width: 100px;
+            }
+
+            .header_button_right>div,
+            .header_button_right>figure {
+                margin: 0 16px;
+            }
+
+            .header_main nav {
+                transform: translateX(0px);
+            }
+
+        }
+
+
+        @media (max-width: 1024px) {
+            .header_main>h1 {
+                width: 100px;
+                height: 18px;
+            }
+
+            .header_main nav>ul>li {
+                margin: 0 4px;
+                font-size: 12px;
+            }
+
+            .search_box {
+                padding: 10px 16px;
+
+            }
+        }
+
+        @media (max-width: 760px) {
+            .pc_header {
+                display: none;
+            }
+            body {
+                background-position: 23%;
+                /* background-image: url(./img/동아제약1.jpg); */
+                /* height: 100vh; */
+                background-size: cover;
+            }
+        }
+
+        @media (min-width: 760px) {
+            .mo_header {
+                display: none;
+            }
+
+        }
+
+
+        .mo_header_main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: solid 1px #000;
+            border-bottom: solid 1px #000;
+            padding: 16px 0;
+            margin-top: 10px;
+        }
+
+        .mo_header_main>h1 {
+            background-image: url(./img/logo.svg);
+            width: 150px;
+            height: 25px;
+            background-size: cover;
+            margin-left: 32px;
+        }
+
+        .mo_header_button_right {
+            display: flex;
+        }
+
+        .mo_header_button_right > figure {
+            margin-right: 16px;
+        }
+
+        .mo_header_button_right > figure>i {
+            margin: 0 16px;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
-        <div class="header_top">
-            <ul>
-                <li><a href="#">준법경영</a></li>
-                <li><a href="#">판매약국찾기</a></li>
-                <li><a href="#">감사제보하기</a></li>
-            </ul>
-        </div>
-        <div class="header_main">
-            <h1>
-
-            </h1>
-            <nav>
+        <div class="pc_header">
+            <div class="header_top">
                 <ul>
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">브랜드</a></li>
-                    <li><a href="#">R&D</a></li>
-                    <li><a href="#">정도경영</a></li>
-                    <li><a href="#">뉴스룸</a></li>
-                    <li><a href="#">인재채용</a></li>
-                    <li><a href="#">고객지원</a></li>
+                    <li><a href="#">준법경영</a></li>
+                    <li><a href="#">판매약국찾기</a></li>
+                    <li><a href="#">감사제보하기</a></li>
                 </ul>
-            </nav>
-            <div class="header_button_right">
-                <div class="search_box">
-                    <input type="text" placeholder="검색어 입력">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <figure>
-                    <i class="fa-solid fa-globe"></i>
-                </figure>
-                <figure>
-                    <i class="fa-solid fa-bars"></i>
-                </figure>
             </div>
+            <div class="header_main">
+                <h1>
+
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">브랜드</a></li>
+                        <li><a href="#">R&D</a></li>
+                        <li><a href="#">정도경영</a></li>
+                        <li><a href="#">뉴스룸</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">고객지원</a></li>
+                    </ul>
+                </nav>
+                <div class="header_button_right">
+                    <div class="search_box">
+                        <input type="text" placeholder="검색어 입력">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <figure>
+                        <i class="fa-solid fa-globe"></i>
+                    </figure>
+                    <figure>
+                        <i class="fa-solid fa-bars"></i>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="mo_header">
+            <div class="mo_header_main">
+                <h1>
+                </h1>
+
+                <div class="mo_header_button_right">
+                    <figure>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </figure>
+                    <figure>
+                        <i class="fa-solid fa-bars"></i>
+                    </figure>
+                </div>
+            </div>
+
         </div>
     </header>
     <section>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오톡</title>
+    <script src="https://kit.fontawesome.com/88b6c6ee2b.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            border-bottom: solid 1px #8a8a8a;
+        }
+
+        .header_top>ul {
+            display: flex;
+        }
+
+        .header_top>ul>li {
+            list-style: none;
+            margin: 0 16px;
+        }
+
+        .header_top>ul>li>a {
+            text-decoration-line: none;
+            color: black;
+        }
+
+        .header_top_right {
+            display: flex;
+        }
+
+        .header_top_right>figure {
+            margin: 0 16px;
+        }
+
+        .header_bottom {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            align-items: center;
+            border-bottom: solid 1px #8a8a8a;
+        }
+
+        .header_bottom>h2 {
+            font-size: 18px;
+        }
+
+        .header_bottom_right {
+            display: flex;
+        }
+
+        .header_bottom_right>p {
+            padding: 0 16px;
+            border-right: solid 1px #8a8a8a;
+        }
+
+        .header_bottom_right>p:nth-child(3) {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header1">
+            <div class="header_top">
+                <h1>
+                    kakao
+                </h1>
+                <ul>
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">이야기</a></li>
+                    <li><a href="#">기술과 서비스</a></li>
+                    <li><a href="#">약속과 책임</a></li>
+                    <li><a href="#">뉴스</a></li>
+                    <li><a href="#">투자정보</a></li>
+                </ul>
+                <div class="header_top_right">
+                    <figure>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </figure>
+                    <figure>
+                        <i class="fa-solid fa-globe"></i>
+                    </figure>
+                    <figure>
+                        <i class="fa-solid fa-moon"></i>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <h2>카카오톡</h2>
+            <div class="header_bottom_right">
+                <p>카톡 안녕가이드</p>
+                <p>카톡설명서</p>
+                <p>다운로드</p>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
