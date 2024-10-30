@@ -6,23 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오톡</title>
     <script src="https://kit.fontawesome.com/88b6c6ee2b.js" crossorigin="anonymous"></script>
+
     <style>
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: 'NanumSquareNeoExtraBold';
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.ttf) format("truetype");
+        }
+
         * {
             padding: 0;
             margin: 0;
         }
-        
+
+        .header_box {
+            display: flex;
+            border-bottom: solid 1px #8a8a8a;
+        }
 
         .header_top {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin: 0 auto;
+            width: 1200px;
             height: 80px;
-            border-bottom: solid 1px #8a8a8a;
         }
 
         .header_top>ul {
             display: flex;
+            font-family: 'NanumSquareNeo';
         }
 
         .header_top>ul>li {
@@ -43,16 +62,23 @@
             margin: 0 16px;
         }
 
+        .header_box_bottom {
+            border-bottom: solid 1px #8a8a8a;
+        }
+
         .header_bottom {
+            margin: 0 auto;
+            width: 1200px;
             display: flex;
             justify-content: space-between;
             height: 80px;
             align-items: center;
-            border-bottom: solid 1px #8a8a8a;
+
         }
 
         .header_bottom>h2 {
             font-size: 18px;
+            font-family: 'NanumSquareNeoExtraBold';
         }
 
         .header_bottom_right {
@@ -62,17 +88,78 @@
         .header_bottom_right>p {
             padding: 0 16px;
             border-right: solid 1px #8a8a8a;
+            font-family: 'NanumSquareNeoExtraBold';
         }
 
         .header_bottom_right>p:nth-child(3) {
             border: none;
+            padding-right: 6px;
+        }
+
+        @media (max-width: 1440px) {
+            .header_top {
+                width: 950px;
+            }
+
+            .header_top>ul>li {
+                margin: 0 12px;
+            }
+
+            .header_bottom {
+                width: 950px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .header_top {
+                width: 712px;
+            }
+
+            .header_top>ul {
+                display: none;
+            }
+
+            .header_top_right>figure:nth-child(3) {
+                display: none;
+
+            }
+
+            .header_bottom {
+                width: 630px;
+            }
+
+            .header_bottom_right>p:nth-child(1) {
+                display: none;
+            }
+
+            .header_bottom_right>p:nth-child(2) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header_top {
+                width: 412px;
+            }
+
+            .header_bottom {
+                width: 400px;
+            }
+
+            .header_bottom_right>p {
+                display: none;
+            }
+
+            .header_top_right>figure:nth-child(2) {
+                margin: 0;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="header1">
+        <div class="header_box">
             <div class="header_top">
                 <h1>
                     kakao
@@ -98,12 +185,15 @@
                 </div>
             </div>
         </div>
-        <div class="header_bottom">
-            <h2>카카오톡</h2>
-            <div class="header_bottom_right">
-                <p>카톡 안녕가이드</p>
-                <p>카톡설명서</p>
-                <p>다운로드</p>
+        <div class="header_box_bottom">
+            <div class="header_bottom">
+                <h2>카카오톡</h2>
+                <div class="header_bottom_right">
+                    <p>카톡 안녕가이드</p>
+                    <p>카톡설명서</p>
+                    <p>다운로드</p>
+                    <i class="fa-solid fa-circle-arrow-down"></i>
+                </div>
             </div>
         </div>
     </header>
